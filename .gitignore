@@ -4,8 +4,8 @@ airbnb/dbt_packages/
 airbnb/dbt_internal_packages/
 
 archive
+course/airbnb/profiles.yml
 dbt_dagster_project/tmp*
-airbnb/profiles.yml
 
 logs/
 venv/

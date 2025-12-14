@@ -1,0 +1,15 @@
+airbnb:
+  outputs:
+    dev:
+      type: snowflake
+      account: WEEXWAW-TE80357
+      user: dbt
+
+      role: TRANSFORM
+      # Setup helper: https://dbtsetup.nordquant.com/
+      private_key: "-----BEGIN RSA PRIVATE KEY-----...-----END RSA PRIVATE KEY-----"
+      database: AIRBNB
+      schema: DEV
+      threads: 1
+      warehouse: COMPUTE_WH
+  target: dev
