@@ -6,4 +6,5 @@
 * `pip install dbt-snowflake==1.11`: install dbt.
 * `dbt --version`: verify dbt.
 * `dbt init --skip-profile-setup airbnb`: create project.
-* 
+* `dbt debug`: verify dbt configurations, specifically the snowflake connections with the server
+* `dbt run`: to go through models and tests, etc.
