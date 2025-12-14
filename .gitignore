@@ -11,11 +11,13 @@ logs/
 venv/
 
 **/__pycache__/
+*.iml
 *.pyc
 tmp*/
 
 /my_dbt_dagster_project
 
 .claude
+.idea/
 .user.yml
 .DS_Store
