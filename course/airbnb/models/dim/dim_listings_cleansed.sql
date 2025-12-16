@@ -1,13 +1,13 @@
 with src_listings as (
-    select     listing_id,
-               listing_name,
-               listing_url,
-               room_type,
-               minimum_nights,
-               host_id,
-               price_str,
-               created_at,
-               updated_at
+    select listing_id,
+           listing_name,
+           listing_url,
+           room_type,
+           minimum_nights,
+           host_id,
+           price_str,
+           created_at,
+           updated_at
     from {{ ref('src_listings') }}
 )
 select
