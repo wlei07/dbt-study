@@ -12,5 +12,7 @@
 * `dbt run`: to go through models and tests, etc.
 
 # Install Dagster
-* `pip install dagster-dbt`
+* `pip install dagster-dbt`: it is dbt integration for dagster, as dependency, it will install dagster core.
 * `pip install dagster-webserver`
+* `dagster-dbt project scaffold --project-name my_dbt_dagster_project --dbt-project-dir=airbnb`
+* `dagster dev`
