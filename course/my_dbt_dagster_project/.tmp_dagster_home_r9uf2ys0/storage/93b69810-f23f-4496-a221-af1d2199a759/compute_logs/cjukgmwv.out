@@ -1,0 +1,24 @@
+Running with dbt=1.10.16
+Registered adapter: snowflake=1.11.0-rc3
+Found 6 models, 520 macros
+
+Concurrency: 1 threads (target='dev')
+
+1 of 6 START sql view model DEV.src_hosts ...................................... [RUN]
+1 of 6 OK created sql view model DEV.src_hosts ................................. [[32mSUCCESS 1[0m in 0.30s]
+2 of 6 START sql view model DEV.src_listings ................................... [RUN]
+2 of 6 OK created sql view model DEV.src_listings .............................. [[32mSUCCESS 1[0m in 0.21s]
+3 of 6 START sql view model DEV.src_reviews .................................... [RUN]
+3 of 6 OK created sql view model DEV.src_reviews ............................... [[32mSUCCESS 1[0m in 0.22s]
+4 of 6 START sql table model DEV.dim_hosts_cleansed ............................ [RUN]
+4 of 6 OK created sql table model DEV.dim_hosts_cleansed ....................... [[32mSUCCESS 1[0m in 1.31s]
+5 of 6 START sql table model DEV.dim_listings_cleansed ......................... [RUN]
+5 of 6 OK created sql table model DEV.dim_listings_cleansed .................... [[32mSUCCESS 1[0m in 0.95s]
+6 of 6 START sql incremental model DEV.fct_reviews ............................. [RUN]
+6 of 6 OK created sql incremental model DEV.fct_reviews ........................ [[32mSUCCESS 1[0m in 1.94s]
+
+Finished running 1 incremental model, 2 table models, 3 view models in 0 hours 0 minutes and 6.22 seconds (6.22s).
+
+[32mCompleted successfully[0m
+
+Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6

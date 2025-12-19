@@ -1,3 +1,6 @@
+{{ config(
+    materialized='view'
+) }}
 with src_listings as (
     select listing_id,
            listing_name,

@@ -1,3 +1,6 @@
+{{ config(
+    materialized='view'
+) }}
 with src_hosts as (
     select host_id,
            host_name,
