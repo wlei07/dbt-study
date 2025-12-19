@@ -4,7 +4,7 @@
 * `source venv/bin/activate`, or `. venv/bin/activate`: activate the venv.
 * `which python`: verify the venv.
 * `deactivate`: exit by venv.
-* `pip install dbt-snowflake==1.11.0rc2`: install dbt.
+* `pip install dbt-snowflake==1.11.0rc3`: install dbt.
 * `pip install dbt-autofix`: for auto-formatting dbt models.
 * `dbt --version`: verify dbt.
 * `dbt init --skip-profile-setup airbnb`: create project.
