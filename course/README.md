@@ -19,7 +19,7 @@
 * `pip install dagster-dbt`: it is dbt integration for dagster, as dependency, it will install dagster core.
 * `pip install dagster-webserver`
 * `dagster-dbt project scaffold --project-name my_dbt_dagster_project --dbt-project-dir=airbnb`
-* `dagster dev`
+* `dagster dev --port=3002`
 
 # About Jinja:
 * `{# This is a comment #}`
