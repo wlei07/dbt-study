@@ -14,6 +14,7 @@
 * `dbt seed`: copy seeds to snowflake, seeds are a CSV file in seeds folder defined in the dbt_project.yml
 * `dbt ls --resource-type model`
 * `dbt compile`: check if all models are connected correctly
+* `dbt source freshness`: check the freshness of the sources defined in the sources.yml: `sources.tables[].config[].freshness`.
 
 # Install Dagster
 * `pip install dagster-dbt`: it is dbt integration for dagster, as dependency, it will install dagster core.
