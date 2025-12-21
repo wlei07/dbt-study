@@ -11,7 +11,9 @@
 * `dbt debug`: verify dbt configurations, specifically the snowflake connections with the server
 * `dbt run`: to go through models and tests, etc.
 * `dbt run --full-refresh`: to rebuild the whole model.
-* `dbt ls --resource-type model`: list 
+* `dbt seed`: copy seeds to snowflake, seeds are a CSV file in seeds folder defined in the dbt_project.yml
+* `dbt ls --resource-type model`
+* `dbt compile`: check if all models are connected correctly
 
 # Install Dagster
 * `pip install dagster-dbt`: it is dbt integration for dagster, as dependency, it will install dagster core.

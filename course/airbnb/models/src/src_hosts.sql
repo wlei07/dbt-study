@@ -1,5 +1,5 @@
 with raw_hosts as (
-    select ID, NAME, IS_SUPERHOST, CREATED_AT, UPDATED_AT from AIRBNB.RAW.RAW_HOSTS
+    select ID, NAME, IS_SUPERHOST, CREATED_AT, UPDATED_AT from {{ source('airbnb', 'hosts') }}
 )
 select
     id as host_id,
