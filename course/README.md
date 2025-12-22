@@ -15,6 +15,9 @@
 * `dbt ls --resource-type model`
 * `dbt compile`: check if all models are connected correctly
 * `dbt source freshness`: check the freshness of the sources defined in the sources.yml: `sources.tables[].config[].freshness`.
+* `dbt snapshot`
+* `dbt test`
+* `dbt build`: whole package of `dbt seed` -> `dbt run` -> `dbt snapshot` -> tests
 
 # Install Dagster
 * `pip install dagster-dbt`: it is dbt integration for dagster, as dependency, it will install dagster core.

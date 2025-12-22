@@ -1,0 +1,12 @@
+snapshots:
+  - name: scd_raw_hosts
+    relation: source('airbnb', 'hosts')
+    config:
+      unique_key: id
+      updated_at: updated_at
+      # timestamp strategy: lookat snapshot and compare with latest data the updated_at column
+      # check strategy: tells dbt which columns it should closely monitor
+      strategy: timestamp
+      # what should happen if someone deletes a record from the source table: by default dbt ignores deletions.
+      # here invalidate means if someone deletes a record from the source table, the snapshot will be updated.
+      hard_deletes: invalidate
