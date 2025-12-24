@@ -17,6 +17,7 @@
 * `dbt source freshness`: check the freshness of the sources defined in the sources.yml: `sources.tables[].config[].freshness`.
 * `dbt snapshot`
 * `dbt test`
+* `dbt test -x`: stop test execution after the first failure so it fails earlier.
 * `dbt build`: whole package of `dbt seed` -> `dbt run` -> `dbt snapshot` -> tests
 
 # Install Dagster
