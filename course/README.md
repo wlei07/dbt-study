@@ -18,6 +18,7 @@
 * `dbt snapshot`
 * `dbt test`
 * `dbt test -x`: stop test execution after the first failure so it fails earlier.
+* `dbt test -s dim_listings_minimum_nights`: select a single test by name
 * `dbt build`: whole package of `dbt seed` -> `dbt run` -> `dbt snapshot` -> tests
 
 # Install Dagster

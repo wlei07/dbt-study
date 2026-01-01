@@ -1,4 +1,3 @@
-
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
@@ -34,3 +33,9 @@ models:
       +materialized: table
     src:
       +materialized: ephemeral
+data_tests:
+  # you will be able to see test failures, from logs:
+  # select * from AIRBNB.DEV_dbt_test__audit.accepted_values_dim_listings_c_85259bd6121f69d13e3814c2538c188d
+  +store_failures: true
+  # overwrite the default schema used to store test failures, final name is prefixed with dev_, i.e. dev_test_failures_leiw
+  +schema: test_failures_leiw
