@@ -1,4 +1,5 @@
 airbnb:
+  target: dev
   outputs:
     dev:
       type: snowflake
@@ -11,4 +12,3 @@ airbnb:
       schema: DEV
       threads: 1
       warehouse: COMPUTE_WH
-  target: dev
