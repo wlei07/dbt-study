@@ -1,5 +1,6 @@
 models:
   - name: dim_listings_cleansed
+    description: Cleansed table which contains Airbnb listings.
     data_tests:
       - minimum_row_count:
           # passing arguments
@@ -9,10 +10,12 @@ models:
           severity: error
     columns:
       - name: listing_id
+        description: Primary key for the listing.
         data_tests:
           - unique
           - not_null
       - name: host_id
+        description: The hosts's id. References the host table.
         data_tests:
           - not_null
           - relationships:
@@ -20,6 +23,7 @@ models:
                 to: ref('dim_hosts_cleansed')
                 field: host_id
       - name: room_type
+        description: Type of the apartment / room.
         data_tests:
           - accepted_values:
               arguments:
@@ -29,6 +33,8 @@ models:
                   - "Shared room"
                   - "Hotel room"
       - name: minimum_nights
+        # jinja syntax to refer to document defined in another md file
+        description: '{{ doc("dim_listing_cleansed__minimum_nights") }}'
         data_tests:
           - positive_values
   - name: dim_hosts_cleansed
