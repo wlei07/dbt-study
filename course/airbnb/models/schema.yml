@@ -38,16 +38,26 @@ models:
         data_tests:
           - positive_values
   - name: dim_hosts_cleansed
+    description: replace empty hosts name with a value
     config:
       contract:
         enforced: true
     columns:
       - name: host_id
         data_type: integer
+        tests:
+          - not_null
+          - unique
       - name: host_name
         data_type: string
+        tests:
+          - not_null
       - name: is_superhost
         data_type: string
+        tests:
+          - accepted_values:
+              arguments:
+                values: [ 't', 'f' ]
       - name: updated_at
         data_type: timestamp
       - name: created_at

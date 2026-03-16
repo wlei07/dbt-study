@@ -3,7 +3,10 @@
 
 Hey, welcome to our Airbnb pipeline documentation!
 
-Here is the schema of our input data:
+Here is the schema of our input data from public online location:
 ![input schema](https://dbtlearn.s3.us-east-2.amazonaws.com/input_schema.png)
+
+Here is the schema of our input data from project packa:
+![input schema](assets/input_schema.png)
 
 {% enddocs %}
