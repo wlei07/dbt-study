@@ -12,47 +12,6 @@ Create a snowflake account and a database.
 Go to location `course/airbnb`
 * `cp -rf ../../profiles.yml.sample ./profiles.yml`: copy the profiles.yml file, update the private key.
 
-# Setup Preset
-* go to https://10minutemail.com/ get the temporary email address
-* go to the https://preset.io/ click free trial 
-
-Connect to the database:
-* select use `SQLAlchemy URI`
-* Display Name: preset
-* snowflake://preset@XGFOFSM-EH42249/airbnb?role=reporter&warehouse=compute_wh
-* Advanced tab -> Security:
-```json
-{
-  "auth_method": "keypair",
-  "auth_params": {
-    "privatekey_body": "the RSA private key, in one line separated by \n"
-  }
-}
-```
-## Create a new Preset chart
-* goto the dataset tab, create new dataset
-* Database: preset
-* Schema: dev
-* Table: mart_fullmoon_reviews -> Create and explore dataset
-* Create a new chart -> # Bar -> Create a new chart
-* X-axis: IS_FULL_MOON
-* Metrics: fx COUNT(*)
-* Dimensions: REVIEW_SENTIMENT
-* Click `Create chart`
-* Contribution Mode: Row -> Update chart
-* Customize tab:
-* Stacked Style: Stack -> Update chart
-* Left upper corner: `Add the name of the chart` -> `Full Moon vs Reviews` -> Save
-## Create a new Dashboard
-* goto the Dashboards tab from the top
-* `+ Dashboard` button from the upper right corner
-* drag the chart `Full Moon vs Reviews` into the dashboard from the right panel
-* make it larger by dragging the right border
-* Click the `Layout elements` from the right panel
-* Drag the Header and put it above the chart
-* Put some text in the header, for example, "Executive Dashboard"
-* Replace the `unnamed dashboard` from the top with some text, for example, "Executive Dashboard" -> Save
-
 # Install dbt and dagster
 ## Install dbt and dagster by `uv`
 In a directory where you have `pyproject.toml` (root project directory):
@@ -99,6 +58,47 @@ In a directory where you have `pyproject.toml` (root project directory):
 ## dbt documentation
 * `dbt docs generate`: generate documentation, taking input form the *.yml files in the models folder.
 * `dbt docs serve`: start an HTTP server for the generated documentation.
+
+# Setup Preset
+* go to https://10minutemail.com/ get the temporary email address
+* go to the https://preset.io/ click free trial 
+
+Connect to the database:
+* select use `SQLAlchemy URI`
+* Display Name: preset
+* snowflake://preset@XGFOFSM-EH42249/airbnb?role=reporter&warehouse=compute_wh
+* Advanced tab -> Security:
+```json
+{
+  "auth_method": "keypair",
+  "auth_params": {
+    "privatekey_body": "the RSA private key, in one line separated by \n"
+  }
+}
+```
+## Create a new Preset chart
+* goto the dataset tab, create new dataset
+* Database: preset
+* Schema: dev
+* Table: mart_fullmoon_reviews -> Create and explore dataset
+* Create a new chart -> # Bar -> Create a new chart
+* X-axis: IS_FULL_MOON
+* Metrics: fx COUNT(*)
+* Dimensions: REVIEW_SENTIMENT
+* Click `Create chart`
+* Contribution Mode: Row -> Update chart
+* Customize tab:
+* Stacked Style: Stack -> Update chart
+* Left upper corner: `Add the name of the chart` -> `Full Moon vs Reviews` -> Save
+## Create a new Dashboard
+* goto the Dashboards tab from the top
+* `+ Dashboard` button from the upper right corner
+* drag the chart `Full Moon vs Reviews` into the dashboard from the right panel
+* make it larger by dragging the right border
+* Click the `Layout elements` from the right panel
+* Drag the Header and put it above the chart
+* Put some text in the header, for example, "Executive Dashboard"
+* Replace the `unnamed dashboard` from the top with some text, for example, "Executive Dashboard" -> Save
 
 # About Jinja:
 * `{# This is a comment #}`
