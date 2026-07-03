@@ -2,7 +2,7 @@
 # Please go to https://github.com/zoltanctoth/dbt-reference-production-repo
 # for a latest working example of this file
 
-name: LEI - Prod deploy (on merge to main / manual)
+name: Prod deploy (on merge to main / manual) - LEI
 
 on:
   push:

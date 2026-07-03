@@ -2,7 +2,7 @@
 # Please go to https://github.com/zoltanctoth/dbt-reference-production-repo
 # for a latest working example of this file
 
-name: PR slim CI (defer to prod artifact)
+name: PR slim CI (defer to prod artifact) - LEI
 
 on:
   pull_request:
