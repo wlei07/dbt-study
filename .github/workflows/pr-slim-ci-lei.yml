@@ -44,7 +44,7 @@ jobs:
         with:
           workflow: prod-build-lei.yml
           branch: main
-          name: prod-target
+          name: lei-prod-target
           path: course/airbnb/prod-target
           if_no_artifact_found: fail
       - name: dbt build (slim CI if manifest available, else full)
