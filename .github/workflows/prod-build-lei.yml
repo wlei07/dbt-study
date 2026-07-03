@@ -2,7 +2,7 @@
 # Please go to https://github.com/zoltanctoth/dbt-reference-production-repo
 # for a latest working example of this file
 
-name: LEI - Prod deploy (on merge to main / manual)
+name: Prod deploy (on merge to main / manual) - LEI
 
 on:
   push:
@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   build:
-    name: Production deps and build
+    name: Production deps and build - LEI
     if: github.repository != 'nordquant/complete-dbt-bootcamp-zero-to-hero'
     runs-on: ubuntu-latest
     env:
@@ -37,6 +37,6 @@ jobs:
       - name: Upload prod target as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: prod-target
+          name: lei-prod-target
           path: airbnb/target/
           retention-days: 90
