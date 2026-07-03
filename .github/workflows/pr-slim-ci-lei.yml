@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   slim-ci:
-    name: Build modified with defer to prod artifact
+    name: Build modified with defer to prod artifact - LEI
     if: github.repository != 'nordquant/complete-dbt-bootcamp-zero-to-hero'
     runs-on: ubuntu-latest
     env:

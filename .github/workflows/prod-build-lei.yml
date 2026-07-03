@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   build:
-    name: Production deps and build
+    name: Production deps and build - LEI
     if: github.repository != 'nordquant/complete-dbt-bootcamp-zero-to-hero'
     runs-on: ubuntu-latest
     env:
