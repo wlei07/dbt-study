@@ -137,3 +137,4 @@ Connect to the database:
 * `{# This is a comment #}`
 * `{% set my_name = "Lei" %}`: statement: assignments, if statements, macro calls, etc.
 * `{{ my_name }}`: expressions
+
