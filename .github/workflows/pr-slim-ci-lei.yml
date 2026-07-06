@@ -45,6 +45,8 @@ jobs:
           workflow: prod-build-lei.yml
           branch: main
           name: lei-prod-target
+          # This is the destination directory on the PR runner.
+          # It has nothing to do with the source path course/airbnb/target/ used by the prod workflow.
           path: course/airbnb/prod-target
           if_no_artifact_found: fail
       - name: dbt build (slim CI if manifest available, else full)
