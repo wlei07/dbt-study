@@ -38,5 +38,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lei-prod-target
-          path: airbnb/target/
+          path: course/airbnb/target/
           retention-days: 90
