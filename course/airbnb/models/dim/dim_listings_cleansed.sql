@@ -9,7 +9,7 @@ with src_listings as (
            room_type,
            minimum_nights,
            host_id,
-           price_str,
+           price_str_lei,
            created_at,
            updated_at
     from {{ ref('src_listings') }}
@@ -24,13 +24,13 @@ select
     end as minimum_nights,
     host_id,
     replace(
-        price_str,
+        price_str_lei,
         '$'
     ) :: NUMBER (
         10,
         2
     ) as price,
-    price_str,
+    price_str_lei,
     created_at,
     updated_at
 from src_listings

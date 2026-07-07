@@ -8,7 +8,7 @@ select
     room_type,
     minimum_nights,
     host_id,
-    price as price_str,
+    price as price_str_lei,
     created_at,
     updated_at
 from raw_listings
