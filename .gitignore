@@ -4,10 +4,11 @@ airbnb/dbt_packages/
 airbnb/dbt_internal_packages/
 
 archive
-course/airbnb/profiles.yml
-dbt_dagster_project/tmp*
 airbnb/profiles.yml
 airbnb/.env
+course/airbnb/_prod_profiles/set_env.sh
+course/airbnb/profiles.yml
+dbt_dagster_project/tmp*
 .env
 
 logs/

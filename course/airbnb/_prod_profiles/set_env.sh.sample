@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#
+# Environment variables required by _prod_profiles/profiles.yml
+#
+# Usage:  source ./set_env.sh
+#
+# NOTE: this script must be *sourced* (not executed) so the exports
+#       land in your current shell:  `source ./set_env.sh`
+
+# --- Snowflake account identifier, e.g. abc12345.eu-west-1 -------------------
+export SNOWFLAKE_ACCOUNT="QMRWSCR-RX51219"
+
+# --- Snowflake user dbt connects as ------------------------------------------
+export DBT_USER="dbt"
+
+# --- Private key for key-pair authentication ---------------------------------
+# Either inline the PEM contents, or read it from a file. Pick one:
+export PRIVATE_KEY="-----BEGIN PRIVATE KEY-----
+hello dbt!
+-----END PRIVATE KEY-----"
+# export PRIVATE_KEY="$(cat "$HOME/.ssh/snowflake_rsa_key.p8")"
+
+# --- Personal dev schema suffix ----------------------------------------------
+# profiles.yml builds the dev schema as DBT_{{ DBT_ENV_NAME | upper }} -> DBT_MYDEV
+export DBT_ENV_NAME="MYDEV"

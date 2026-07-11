@@ -6,15 +6,16 @@ Create a snowflake account and a database.
 * Username: admin
 * Password: somthing you want
 * Startup tutorial: click `Skip for now`
-* Convert your public key into snowflake format: `ssh-keygen -f ~/.ssh/id_rsa.pub -e -m PKCS8 | awk 'NR>1 && !/END PUBLIC KEY/' | tr -d '\n'`
-* Follow the file [Course Resources](/_course_resources/course-resources.md), replace the public key in the SQL scripts (note already replaced):
-  * `ssh-keygen -e -m PKCS8 -f ~/.ssh/id_rsa.pub | grep -v "^---" | tr -d '\n'`
+* Follow the file [Course Resources](/_course_resources/course-resources.md)
 
-Go to location `course/airbnb`.
-* `cp -rf ../../profiles.yml.sample ./profiles.yml`:
-  * copy the profiles.yml file,
-  * update the private key.
-  * update account
+Go to the file `course/airbnb/_prod_profiles/set_env.sh.sample`.
+* copy it as set_env.sh in the same folder
+* update the private key.
+* update account
+
+Optionally, copy the file `profiles.yml.sample` to  `course/airbnb/profiles.yml`.
+* update the private key.
+* update account
 
 # Install dbt and dagster
 Install dbt fusion, the latest command should be available from their website:
