@@ -32,7 +32,7 @@ jobs:
           cache-dependency-glob: "pyproject.toml"
       - run: uv python install 3.13
       - run: uv sync
-      - name: Set DBT_ENV_NAME from branch (uppercase, _ for / and -)
+      - name: Set DBT_ENV_NAME from branch (uppercase, _ for / and -) - LEI
         run: |
           NAME="${{ github.head_ref }}"
           SANITIZED=$(echo "$NAME" | tr '/' '_' | tr '-' '_' | tr '[:lower:]' '[:upper:]')
@@ -49,7 +49,7 @@ jobs:
           # It has nothing to do with the source path course/airbnb/target/ used by the prod workflow.
           path: course/airbnb/prod-target
           if_no_artifact_found: fail
-      - name: dbt build (slim CI if manifest available, else full)
+      - name: dbt build (slim CI if manifest available, else full) - LEI
         run: |
           cd course/airbnb
           uv run dbt build --profiles-dir _prod_profiles --target dev \

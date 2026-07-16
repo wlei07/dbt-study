@@ -1,8 +1,8 @@
 # Reference only
 # Please go to https://github.com/zoltanctoth/dbt-reference-production-repo
-# for a latest working example of this file
+# for the latest working example of this file
 
-name: PR cleanup (drop dev schema on merge)
+name: PR cleanup (drop dev schema on merge) - LEI
 
 on:
   pull_request:
@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   drop-dev-schema:
-    name: Drop dev schemas for merged PR
+    name: Drop dev schemas for merged PR - LEI
     if: >-
       github.event.pull_request.merged == true &&
       github.repository != 'nordquant/complete-dbt-bootcamp-zero-to-hero'
@@ -34,7 +34,7 @@ jobs:
           cache-dependency-glob: "pyproject.toml"
       - run: uv python install 3.13
       - run: uv sync
-      - name: Set DBT_ENV_NAME from merged branch (uppercase, _ for / and -)
+      - name: Set DBT_ENV_NAME from merged branch (uppercase, _ for / and -) - LEI
         run: |
           NAME="${{ github.head_ref }}"
           SANITIZED=$(echo "$NAME" | tr '/' '_' | tr '-' '_' | tr '[:lower:]' '[:upper:]')
