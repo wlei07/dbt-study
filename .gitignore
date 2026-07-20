@@ -32,3 +32,8 @@ PROD.md
 set-env.sh
 set-env.ps1
 /airbnb/target*/
+# Altimate Datamates skill files (auto-generated)
+.github/instructions/datamate/
+.github/instructions/snowflake/
+.github/instructions/general-awareness.instructions.md
+.github/instructions/.managed-skills.json
